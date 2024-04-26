@@ -10,7 +10,7 @@
     "lint": "echo \"Linting passed successfully!\"",
     "quality-check": "echo \"Quality check passed successfully!\" ",
     "security-scan": "echo \"Security scan passed successfully!\"",
-    "codecov-report": "codecov",
+    "codecov-report": "istanbul report",
     "build-docs": "jsdoc2md run.js > README.md"
   },
   "dependencies": {
