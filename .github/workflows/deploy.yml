@@ -27,8 +27,11 @@ jobs:
     - name: Install dependencies
       run: npm install
 
+    - name: Run tests
+      run: npm test
+
     - name: Build
-      run: npm run build
+      run: node run.js
 
     - name: Deploy to Netlify
       uses: nwtgck/actions-netlify@v1
