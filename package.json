@@ -35,7 +35,6 @@
     "node": ">=12.10.0"
   },
   "devDependencies": {
-    "codecov": "^3.8.3",
     "eslint": "^9.1.1",
     "jsdoc-to-markdown": "^8.0.1",
     "prettier": "^3.2.5",
