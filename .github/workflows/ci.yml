@@ -32,7 +32,7 @@ jobs:
         run: npm run lint
 
       - name: Dependabot action
-        uses: dependabot/dependabot-core@master
+        uses: dependabot/dependabot-core@v2.0.0 
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           directory: "/"
