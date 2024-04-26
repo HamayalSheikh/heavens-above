@@ -12,14 +12,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Dependabot action
-        uses: dependabot/dependabot-core@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          directory: "/"
-
       - name: Install dependencies
         run: npm install
+
+      - name: Update dependencies
+        run: npm update
 
       - name: Run tests
         run: npm test
