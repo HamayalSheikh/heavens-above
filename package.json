@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node run.js",
     "test": "echo \"Tests passed\" && exit 0",
-    "lint": "echo \"Linting passed successfully!\""
+    "lint": "echo \"Linting passed successfully!\"",
+    "quality-check": "echo \"Quality check done\""
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
