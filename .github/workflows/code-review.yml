@@ -18,11 +18,6 @@ jobs:
       - name: Security scan
         run: npm run security-scan
 
-      - name: Codecov report
-        run: npm run codecov-report
-
-        # Add more steps for integrating with other code review tools or services
-
         # Enforce required checks before merging
       - name: Mergeability check
         run: |
