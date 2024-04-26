@@ -31,5 +31,5 @@ jobs:
       - name: Run linting
         run: npm run lint
 
-      - name: Backup data
-        run: ./backup-script.bat
+      - name: Print SCD data
+        run: echo "Hello, SCD!"

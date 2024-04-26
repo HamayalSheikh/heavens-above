@@ -12,5 +12,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Backup data
-        run: ./backup-script.bat
+      # - name: Backup data
+      #   run: ./backup-script.bat
+
+      - name: Print SCD data
+        run: echo "Hello, SCD!"
