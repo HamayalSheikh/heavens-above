@@ -9,7 +9,7 @@
     "test": "echo \"Tests passed\" && exit 0",
     "lint": "echo \"Linting passed successfully!\"",
     "quality-check": "echo \"Quality check done\"",
-    "security-scan": "echo \"Security scan done\"",
+    "security-scan": "npx snyk test",
     "codecov-report": "codecov"
   },
   "dependencies": {
