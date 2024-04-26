@@ -1,0 +1,23 @@
+name: Custom Workflow
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Generate release notes
+      run: ./generate-release-notes.sh
+
+    - name: Create release
+      uses: actions/create-release@v1
+      with:
+        tag_name: v${{ steps.generate.outputs.version }}
+        release_name: Release v${{ steps.generate.outputs.version }}
+        body: ${{ steps.generate.outputs.notes }}
