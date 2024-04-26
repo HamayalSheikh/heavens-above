@@ -2,40 +2,38 @@ name: Deployment Pipeline
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
+
     strategy:
       matrix:
         node-version: [18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-       
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
-      with:
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
           node-version: ${{ matrix.node-version }}
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Run tests
-      run: npm test
+      - name: Run tests
+        run: npm test
 
-    - name: Build
-      run: node run.js
+      - name: Build
+        run: node run.js
 
-    - name: Deploy to Netlify
-      uses: nwtgck/actions-netlify@v1
-      with:
-        publish-dir: './build'  # Change this to your build directory
-        production-command: 'node run.js'  # Change this to your production build command
-        github-token: ${{ secrets.GITHUB_TOKEN }}  # Make sure this token has access to your repository
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1
+        with:
+          publish-dir: "./build" # Change this to your build directory
+          production-command: "node run.js" # Change this to your production build command
+          github-token: ${{ secrets.GITHUB_TOKEN }} # Make sure this token has access to your repository

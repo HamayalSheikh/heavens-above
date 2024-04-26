@@ -2,15 +2,15 @@ name: Scheduled Tasks
 
 on:
   schedule:
-    - cron: '0 0 * * *' 
+    - cron: "0 0 * * *"
 
 jobs:
   backup:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Backup data
-      run: ./backup-script.bat
+      - name: Backup data
+        run: ./backup-script.bat
