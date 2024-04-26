@@ -21,14 +21,14 @@ jobs:
       - name: Codecov report
         run: npm run codecov-report # Example: If integrating with Codecov
 
-      # Add more steps for integrating with other code review tools or services
+        # Add more steps for integrating with other code review tools or services
 
-      # Enforce required checks before merging
+        # Enforce required checks before merging
       - name: Mergeability check
         run: |
-          # Your script/command to check mergeability before merging
+        # Your script/command to check mergeability before merging
 
-      # Integrate with specific code review tools or services
+        # Integrate with specific code review tools or services
       - name: Custom code review integration
         run: |
-          # Your script/command to integrate with specific tools or services
+        # Your script/command to integrate with specific tools or services
