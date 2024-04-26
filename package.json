@@ -11,7 +11,8 @@
     "quality-check": "echo \"Quality check passed successfully!\" ",
     "security-scan": "echo \"Security scan passed successfully!\"",
     "codecov-report": "istanbul report",
-    "build-docs": "jsdoc2md run.js > README.md"
+    "build-docs": "jsdoc2md run.js > README.md",
+    "build": "parcel build ./public/index.html"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
