@@ -37,5 +37,5 @@ jobs:
       uses: nwtgck/actions-netlify@v1
       with:
         publish-dir: './build'  # Change this to your build directory
-        production-command: 'npm run build'  # Change this to your production build command
+        production-command: 'node run.js'  # Change this to your production build command
         github-token: ${{ secrets.GITHUB_TOKEN }}  # Make sure this token has access to your repository
