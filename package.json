@@ -10,7 +10,7 @@
     "lint": "echo \"Linting passed successfully!\"",
     "quality-check": "echo \"Quality check passed successfully!\" ",
     "security-scan": "echo \"Security scan passed successfully!\"",
-    "codecov-report": "istanbul report",
+    "codecov-report": "istanbul report --dir coverage --report html",
     "build-docs": "jsdoc2md run.js > README.md"
   },
   "dependencies": {
@@ -37,6 +37,7 @@
   "devDependencies": {
     "codecov": "^3.8.3",
     "eslint": "^9.1.1",
+    "istanbul": "^0.4.5",
     "jsdoc-to-markdown": "^8.0.1",
     "prettier": "^3.2.5",
     "stylelint": "^16.4.0",
