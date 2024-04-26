@@ -10,7 +10,7 @@
     "lint": "echo \"Linting passed successfully!\"",
     "quality-fix": "prettier --write .",
     "quality-check": "prettier --check .",
-    "security-scan": "npx snyk test",
+    "security-scan": "npm audit && npm audit fix",
     "codecov-report": "codecov"
   },
   "dependencies": {
