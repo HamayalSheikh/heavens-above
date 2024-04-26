@@ -31,14 +31,11 @@ jobs:
       - name: Run linting
         run: npm run lint
 
-      - name: Dependabot action
-        uses: dependabot/dependabot-core
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          directory: "/"
-
       - name: Install dependencies
         run: npm install
+
+      - name: Update dependencies
+        run: npm update
 
       - name: Run tests
         run: npm test
