@@ -12,12 +12,14 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Generate release notes
-      run: ./generate-release-notes.sh
+    - name: Install dependencies
+      run: npm install
 
-    - name: Create release
-      uses: actions/create-release@v1
-      with:
-        tag_name: v${{ steps.generate.outputs.version }}
-        release_name: Release v${{ steps.generate.outputs.version }}
-        body: ${{ steps.generate.outputs.notes }}
+    - name: Build application
+      run: npm run build
+
+    - name: Run performance tests
+      run: npm run performance-test
+
+    - name: Analyze performance metrics
+      run: npm run analyze-performance
