@@ -18,7 +18,7 @@ cd heavens-above
 # Install dependencies
 npm install
 # Run the app
-# this worksss
+# this work
 node run.js
 ```
 
