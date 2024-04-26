@@ -19,7 +19,7 @@ jobs:
         run: npm run security-scan
 
       - name: Codecov report
-        run: npm run codecov-report # Example: If integrating with Codecov
+        run: npm run codecov-report
 
         # Add more steps for integrating with other code review tools or services
 
