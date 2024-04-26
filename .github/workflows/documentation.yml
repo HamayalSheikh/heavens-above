@@ -3,7 +3,8 @@ name: Documentation Deployment
 on:
   push:
     paths:
-      - 'docs/**'
+      - 'README.md'
+
   
 jobs:
   deploy:
