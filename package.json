@@ -11,7 +11,8 @@
     "quality-fix": "prettier --write .",
     "quality-check": "prettier --check .",
     "security-scan": "npx snyk test",
-    "codecov-report": "codecov"
+    "codecov-report": "codecov",
+    "build-docs": "jekyll build" // For Jekyll
   },  
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
